@@ -54,6 +54,40 @@ npm install -g cordova
 
 ---
 
+## Adding the Splash Screen Plugin
+
+Add the splash screen plugin to your Cordova project:
+```bash
+cordova plugin add cordova-plugin-splashscreen
+```
+
+---
+
+## Configuring the Splash Screen
+
+1. Add the splash screen configuration to `config.xml`:
+   ```xml
+   <!-- Specifies the path to the animated icon for the splash screen on Android -->
+   <preference name="AndroidWindowSplashScreenAnimatedIcon" value="res/screen/android/splash_icon.png" />
+   
+   <!-- Determines whether the splash screen should automatically hide after the app is loaded -->
+   <preference name="AutoHideSplashScreen" value="true" />
+   
+   <!-- Sets the duration of the splash screen animation in milliseconds -->
+   <preference name="AndroidWindowSplashScreenAnimationDuration" value="3000"/>
+   
+   <!-- Defines the background color of the splash screen -->
+   <preference name="AndroidWindowSplashScreenBackground" value="#ffffff" />
+   
+   <!-- Specifies the background color for the splash screen icon -->
+   <preference name="AndroidWindowSplashScreenIconBackgroundColor" value="#c0c0c0" />
+   ```
+
+2. Place your splash image in the appropriate directorie e.g.
+   - `res/screen/android/splash_icon.png`
+
+---
+
 ## Building the Project
 
 To build the Android project:
@@ -81,10 +115,12 @@ If you encounter issues, ensure you’ve configured the environment variables an
      sdkmanager "platforms;android-33" "platforms;android-34"
      ```
 
+3. **`Splash tags no longer supported`**:
+   - Use the `AndroidWindowSplashScreenAnimatedIcon` preference instead of `<splash>` tags.
+
 ---
 
 ## References
 
 - [Cordova Documentation](https://cordova.apache.org/docs/)
 - [Android Developer Guide](https://developer.android.com/)
-```

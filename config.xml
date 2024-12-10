@@ -8,4 +8,20 @@
     <content src="index.html" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
+    <platform name="android">
+        <!-- Specifies the path to the animated icon for the splash screen on Android -->
+        <preference name="AndroidWindowSplashScreenAnimatedIcon" value="res/screen/android/splash_icon.png" />
+        
+        <!-- Determines whether the splash screen should automatically hide after the app is loaded -->
+        <preference name="AutoHideSplashScreen" value="true" />
+        
+        <!-- Sets the duration of the splash screen animation in milliseconds -->
+        <preference name="AndroidWindowSplashScreenAnimationDuration" value="3000"/>
+        
+        <!-- Defines the background color of the splash screen -->
+        <preference name="AndroidWindowSplashScreenBackground" value="#ffffff" />
+        
+        <!-- Specifies the background color for the splash screen icon -->
+        <preference name="AndroidWindowSplashScreenIconBackgroundColor" value="#c0c0c0" />
+    </platform>
 </widget>
