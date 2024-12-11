@@ -1,4 +1,4 @@
-# Cordova Splash Screen Setup Guide
+# Cordova 12 Splash Screen Setup Guide
 
 This guide outlines the steps to configure a splash screen for a Cordova project and set up the necessary environment.
 
@@ -45,11 +45,27 @@ gradle -v
 
 ---
 
-## Installing Cordova
+## Creating a new Cordova 12 App
+
+Create a new app for Splash Screen using Cordova CLI.
+
+### Installing Cordova
 
 Install Cordova globally via npm:
 ```bash
 npm install -g cordova
+```
+
+### Installing Android platform
+
+```bash
+cordova platform add android@12.0.0
+```
+
+### Checking Cordova requirements
+
+```bash
+cordova requirements
 ```
 
 ---
