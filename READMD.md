@@ -9,7 +9,7 @@ This guide outlines the steps to configure a splash screen for a Cordova project
 Ensure the following are installed on your system:
 - **Cordova**: Globally installed via npm.
 - **Java JDK**: Installed version 17 or compatible.
-- **Android SDK**: Installed with API levels 33 and 34.
+- **Android SDK**: Installed with API level 33 (Android 13.0).
 - **Gradle**: Version 7.6 installed.
 - **Android Studio**: Optional, but useful for managing the SDK and debugging.
 
@@ -50,15 +50,6 @@ gradle -v
 Install Cordova globally via npm:
 ```bash
 npm install -g cordova
-```
-
----
-
-## Adding the Splash Screen Plugin
-
-Add the splash screen plugin to your Cordova project:
-```bash
-cordova plugin add cordova-plugin-splashscreen
 ```
 
 ---
@@ -112,7 +103,7 @@ If you encounter issues, ensure you’ve configured the environment variables an
 2. **`Android target not installed`**:
    - Install the required Android targets:
      ```bash
-     sdkmanager "platforms;android-33" "platforms;android-34"
+     sdkmanager "platforms;android-33"
      ```
 
 3. **`Splash tags no longer supported`**:
