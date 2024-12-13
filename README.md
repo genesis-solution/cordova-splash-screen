@@ -1,4 +1,4 @@
-# Cordova 12 Splash Screen Setup Guide
+# Cordova 13 Splash Screen Setup Guide
 
 This guide outlines the steps to configure a splash screen for a Cordova project and set up the necessary environment.
 
@@ -9,8 +9,8 @@ This guide outlines the steps to configure a splash screen for a Cordova project
 Ensure the following are installed on your system:
 - **Cordova**: Globally installed via npm.
 - **Java JDK**: Installed version 17 or compatible.
-- **Android SDK**: Installed with API level 33 (Android 13.0).
-- **Gradle**: Version 7.6 installed.
+- **Android SDK**: Installed with API level 34 (Android 14.0).
+- **Gradle**: Version 8.7 installed.
 - **Android Studio**: Optional, but useful for managing the SDK and debugging.
 
 ---
@@ -22,11 +22,19 @@ Ensure the following are installed on your system:
    - Path to your JDK 17 installation.
    - Example: `C:\Program Files\Java\jdk-17`
 
-2. **ANDROID_HOME**:
+2. **CORDOVA_JAVA_HOME(Optional)**: 
+   - Path to your JDK 17 installation.
+   - Example: `C:\Program Files\Java\jdk-17`
+
+3. **ANDROID_HOME**:
    - Path to your Android SDK installation.
    - Example: `C:\Users\<your-username>\AppData\Local\Android\Sdk`
 
-3. **Path Variables**:
+4. **ANDROID_SDK_ROOT**:
+   - Path to your Android SDK targets.(Same as ANDROID_HOME)
+   - Example: `C:\Users\<your-username>\AppData\Local\Android\Sdk`
+
+5. **Path Variables**:
    Ensure the following directories are added to your `Path` environment variable:
    - `${JAVA_HOME}\bin`
    - `${ANDROID_HOME}\cmdline-tools\latest\bin`
@@ -45,7 +53,7 @@ gradle -v
 
 ---
 
-## Creating a new Cordova 12 App
+## Creating a new Cordova 13 App
 
 Create a new app for Splash Screen using Cordova CLI.
 
@@ -59,7 +67,7 @@ npm install -g cordova
 ### Installing Android platform
 
 ```bash
-cordova platform add android@12.0.0
+cordova platform add android@13.0.0
 ```
 
 ### Checking Cordova requirements
@@ -119,7 +127,7 @@ If you encounter issues, ensure you’ve configured the environment variables an
 2. **`Android target not installed`**:
    - Install the required Android targets:
      ```bash
-     sdkmanager "platforms;android-33"
+     sdkmanager "platforms;android-34"
      ```
 
 3. **`Splash tags no longer supported`**:
